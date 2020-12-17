@@ -74,7 +74,10 @@ class BaseFieldModel(OrderedModel):
 
     @staticmethod
     def get_base_model():
-        return type("DynamicModel", (BaseDynamicModel,), {'__module__': "apps.dynamic.models"})
+        return type("BaseDynamicModelClass",
+                    (BaseDynamicModel,),
+                    {'__module__': "apps.dynamic.models",
+                     "Meta": type("Meta", (), {"abstract": True})})
 
     def get_field_type_display(self):
         field_type_cls = formfield_registry.get(self.field_type)

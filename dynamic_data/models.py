@@ -4,7 +4,7 @@ from django.contrib.gis.db import models
 from django.core.serializers.json import DjangoJSONEncoder
 from django.forms.widgets import HiddenInput
 from django.utils.text import slugify
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from ordered_model.models import OrderedModel
 
 from .formfields import formfield_registry

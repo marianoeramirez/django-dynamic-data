@@ -9,7 +9,7 @@ from json import JSONDecodeError
 
 from django import forms
 from django.utils.decorators import classonlymethod
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .field import CommentBooleanWidget
 from .utils import parse_bool_value
